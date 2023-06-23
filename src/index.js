@@ -15,6 +15,7 @@ async function handlerSubmit(event) {
   event.preventDefault();
   querry = elements.form.elements.searchQuery.value;
   page = 1;
+  maxPage = 0;
   observer.unobserve(elements.loadScroll);
   elements.gallery.innerHTML = '';
   const result = await pictureSearch();
